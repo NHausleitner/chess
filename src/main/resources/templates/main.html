@@ -13,15 +13,15 @@
 
     <section id="spielauswahl">
         <h3>Spiele ein neues Spiel!</h3>
-        <form method="post" th:action="@{/neuesSpiel/freund}">
+        <form method="get" th:action="@{/neuesSpiel/freund}">
             <button type="submit">Neues Spiel gegen einen Freund</button>
         </form>
         <br>
-        <form method="post" th:action="@{/neuesSpiel/karl}">
+        <form method="get" th:action="@{/neuesSpiel/karl}">
             <button type="submit">Neues Spiel gegen Karl</button>
         </form>
         <br>
-        <form method="post" th:action="@{/neuesSpiel/stockfish}">
+        <form method="get" th:action="@{/neuesSpiel/stockfish}">
             <button type="submit">Neues Spiel gegen Stockfish</button>
         </form>
         <br>

@@ -12,7 +12,15 @@
     </header>
 
     <section id="konfiguration">
-
+        <form method="post" th:action="@{#}">
+            <label for="startzeit">Startzeit in Minuten:</label>
+            <input type="text" id="startzeit" name="startzeit" placeholder="z.B. 5">
+            <br>
+            <label for="inkrement">Inkrement in Sekunden:</label>
+            <input type="text" id="inkrement" name="inkrement" placeholder="z.B. 3">
+            <br>
+            <button type="submit">Spiel erstellen</button>
+        </form>
 
 
     </section>

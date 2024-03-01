@@ -15,17 +15,23 @@ public class WebController {
         return "main.html";
     }
 
-    @PostMapping("/neuesSpiel/freund")
+    @GetMapping("/neuesSpiel/freund")
     public String neuesSpielGegenFreund(){
         return "spielFreund.html";
     }
 
-    @PostMapping("/neuesSpiel/karl")
+    @PostMapping("/neuesSpiel/freund")
+    public String spielGegenFreundErstellen(String startzeit, String inkrement){
+        // new Game(startzeit, inkrement)
+        return "redirect:/spiel";
+    }
+
+    @GetMapping("/neuesSpiel/karl")
     public String neuesSpielGegenKarl(){
         return "spielKarl.html";
     }
 
-    @PostMapping("/neuesSpiel/stockfish")
+    @GetMapping("/neuesSpiel/stockfish")
     public String neuesSpielGegenStockfish(){
         return "spielStockfish.html";
     }

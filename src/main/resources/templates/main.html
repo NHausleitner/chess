@@ -11,5 +11,34 @@
         <h1>Willkommen bei Chess!</h1><br>
     </header>
 
+    <section id="spielauswahl">
+        <h3>Spiele ein neues Spiel!</h3>
+        <form method="post" th:action="@{/neuesSpiel/freund}">
+            <button type="submit">Neues Spiel gegen einen Freund</button>
+        </form>
+        <br>
+        <form method="post" th:action="@{/neuesSpiel/karl}">
+            <button type="submit">Neues Spiel gegen Karl</button>
+        </form>
+        <br>
+        <form method="post" th:action="@{/neuesSpiel/stockfish}">
+            <button type="submit">Neues Spiel gegen Stockfish</button>
+        </form>
+        <br>
+    </section>
+
+    <section id="profil">
+        <h2>Hier gehts zu deinem Profil!</h2>
+        <form method="get" th:action="@{/profil(profilname=${profilname})}">
+            <button type="submit">Neues Spiel gegen Stockfish</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <br><br><br>
+        <p>&copy; 2024 Chess - entwickelt von Nick Hausleitner</p>
+    </footer>
+
 </body>
 </html>

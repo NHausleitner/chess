@@ -1,6 +1,4 @@
 package de.nhausleitner.chess.domain.model;
 
-//entity
-public record Spieler(int punkte) {
-
+public record Farbe(String farbe) {
 }

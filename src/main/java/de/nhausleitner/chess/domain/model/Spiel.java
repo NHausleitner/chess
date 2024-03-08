@@ -18,4 +18,10 @@ public class Spiel {
     public void standardSchachInitialisieren(){
         brett.standardSchachInitialisieren();
     }
+
+    public Brett getBrett() {
+        return brett;
+    }
+
+
 }

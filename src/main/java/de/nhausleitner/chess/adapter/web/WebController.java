@@ -5,6 +5,7 @@ import de.nhausleitner.chess.domain.model.Spiel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -30,6 +31,7 @@ public class WebController {
     public String spielGegenFreundErstellen(Integer startzeit, Integer inkrement, Model model){
         Spiel spiel = spielleiter.spielErstellen("freund", startzeit, inkrement);
         spiel.standardSchachInitialisieren();
+        model.addAttribute("brett", spiel.getBrett().getRepräsentation());
         return "/spiel.html";
     }
 
@@ -42,7 +44,6 @@ public class WebController {
     public String neuesSpielGegenStockfish(){
         return "spielStockfish.html";
     }
-
 
 
 
